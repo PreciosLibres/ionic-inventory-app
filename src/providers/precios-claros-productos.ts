@@ -12,16 +12,16 @@ import { Product } from '../models/product';
   for more info on providers and Angular 2 DI.
 */
 @Injectable()
-export class PreciosclarosProductos {
+export class PreciosClarosProductos {
 
-  preciosclarosApiUrl =  'http://198.199.72.76/preciosclaros';
+  preciosClarosApiUrl =  'http://198.199.72.76/preciosclaros';
 
   constructor(public http: Http) {
-    console.log('Hello PreciosclarosProductos Provider');
+    console.log('Hello PreciosClarosProductos Provider');
   }
 
   load(barcode: string): Observable<Product[]> {
-    return this.http.get(`${this.preciosclarosApiUrl}/producto-${barcode}`)
+    return this.http.get(`${this.preciosClarosApiUrl}/producto-${barcode}`)
       .map(res => <Product[]>res.json());
   }
 
