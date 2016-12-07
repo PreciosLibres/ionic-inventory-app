@@ -3,6 +3,8 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
+import { PreciosClarosProductos } from '../providers/precios-claros-productos';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -16,6 +18,6 @@ import { HomePage } from '../pages/home/home';
     MyApp,
     HomePage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, PreciosClarosProductos]
 })
 export class AppModule {}
