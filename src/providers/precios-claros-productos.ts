@@ -14,7 +14,7 @@ import { Product } from '../models/product';
 @Injectable()
 export class PreciosClarosProductos {
 
-  preciosClarosApiUrl =  'http://198.199.72.76/preciosclaros';
+  preciosClarosApiUrl =  'http://precioslibres.org/preciosclaros';
 
   constructor(public http: Http) {
     console.log('Hello PreciosClarosProductos Provider');
